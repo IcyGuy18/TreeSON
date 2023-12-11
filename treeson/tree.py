@@ -44,7 +44,6 @@ class Tree:
             parents.pop()
     
     def _list_parse(self, data: list, parents: list):
-        print(parents)
         for item in data:
             if isinstance(item, list):
                 self._list_parse(item, parents)
