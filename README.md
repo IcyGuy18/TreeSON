@@ -15,30 +15,30 @@ Simple - it takes your data in JSON format and converts it into a data structure
 Here's an example of loading up a JSON data and using it to construct a tree.
 
 ```py
-    from treeson.tree import Node, Tree
-    import json
+from treeson.tree import Node, Tree
+import json
 
-    if __name__ == "__main__":
-        # Load up the JSON contents (if not stored in variable already).
-        with open('data.json', 'r') as f:
-            data = json.load(f)
+if __name__ == "__main__":
+    # Load up the JSON contents (if not stored in variable already).
+    with open('data.json', 'r') as f:
+        data = json.load(f)
 
-        # Make a root node with unique data (by default, it will be called 'unq_root').
-        root_node = Node()
+    # Make a root node with unique data (by default, it will be called 'unq_root').
+    root_node = Node()
 
-        # We make a tree based on the root node.
-        tree = Tree(root_node)
+    # We make a tree based on the root node.
+    tree = Tree(root_node)
 
-        # Run this command with the loaded JSON data passed in.
-        # Everything will be done behind the back.
-        tree.construct_tree(data)
-        
-        # (Optional) Convert the tree to Graphviz-compatible DOT image (as well as a PNG image).
-        tree.to_graphviz_dot()
+    # Run this command with the loaded JSON data passed in.
+    # Everything will be done behind the back.
+    tree.construct_tree(data)
+    
+    # (Optional) Convert the tree to Graphviz-compatible DOT image (as well as a PNG image).
+    tree.to_graphviz_dot()
 
-        # (Optional) Print out the tree in a pre-order traversal fashion.
-        tree.pre_order_traversal()
-        # Note: you can also do 'post_order_traversal()'.
+    # (Optional) Print out the tree in a pre-order traversal fashion.
+    tree.pre_order_traversal()
+    # Note: you can also do 'post_order_traversal()'.
 ```
 
 # To-Do
