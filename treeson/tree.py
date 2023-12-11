@@ -101,7 +101,6 @@ class Tree:
     def _to_dot_language(self, node: Node | None) -> None:
         if node is None:
             return
-        #print(node.data)
         for child in node.children:
             self._to_dot_language(child)
             with open(f'{self._filename}.dot', 'a') as f:
