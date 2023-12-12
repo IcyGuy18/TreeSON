@@ -4,6 +4,10 @@ A simple guide to using **TreeSON**
 
 Simple - it takes your data in JSON format and converts it into a data structure tree that can be used to print out a viewable PNG file.
 
+# Prerequisites
+
+The modules mentioned in the requirements is optional, but necessary for making PNGs. Moreover, the Graphviz executable needs to be installed on your operating system as well.
+
 # Installation
 
 1. Run `git clone https://github.com/IcyGuy18/TreeSON.git`.
